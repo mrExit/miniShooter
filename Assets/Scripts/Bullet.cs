@@ -8,11 +8,14 @@ public class Bullet : MonoBehaviour
     Ray ray, ray1;
     RaycastHit hit;
 
-    
+    private void Update()
+    {
+        Move();
+    }
     void FixedUpdate()
     {
         
-        Move();
+        
         Direction();      
     }    
     private void OnCollisionEnter(Collision collision)
